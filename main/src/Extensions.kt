@@ -23,3 +23,11 @@ fun MutableList<Int>.heapify(): PriorityQueue<Int> =
     PriorityQueue<Int>().apply {
         addAll(this@heapify)
     }
+
+fun String.remove(vararg regex: Regex): String {
+    var str = this
+    for (r in regex) {
+        str = str.replace(r, "")
+    }
+    return str
+}
