@@ -1,4 +1,5 @@
 private typealias Rule = Pair<Int, Int>
+private typealias Update = List<Int>
 
 private class UpdateComparator(
     private val rules: Set<Rule>
@@ -13,7 +14,7 @@ private class UpdateComparator(
 
 private fun partOne(
     rules: List<Rule>,
-    updates: List<List<Int>>
+    updates: List<Update>
 ) {
     val comparator = UpdateComparator(rules.toSet())
     updates.asSequence()
@@ -24,7 +25,7 @@ private fun partOne(
 
 private fun partTwo(
     rules: List<Rule>,
-    updates: List<List<Int>>
+    updates: List<Update>
 ) {
     val comparator = UpdateComparator(rules.toSet())
     updates.asSequence()
